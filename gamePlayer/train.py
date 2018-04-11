@@ -19,7 +19,7 @@ class Trainer:
             total_loss = 0
 
             print("starting %d random plays to populate replay memory" % self.agent.replay_start_size)
-            for i in xrange(self.agent.replay_start_size):
+            for i in range(self.agent.replay_start_size):
                 # follow random policy
                 state, action, reward, next_state, terminal = self.agent.observe(1)
 
@@ -37,7 +37,7 @@ class Trainer:
             sample_failure = 0
             print("\nstart training...")
             start_time = time.time()
-            for i in xrange(self.agent.train_steps):
+            for i in range(self.agent.train_steps):
                 # annealing learning rate
                 lr = self.agent.trainEps(i)
                 state, action, reward, next_state, terminal = self.agent.observe(lr)
