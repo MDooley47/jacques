@@ -1,3 +1,3 @@
-gym
+gym[atari]
 Tensorflow
 opencv-python
